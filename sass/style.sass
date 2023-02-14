@@ -1,0 +1,121 @@
+@import "./nullstyle.scss"
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap')
+
+/*---------color-------------*/
+$color-nav: #F2F6F7
+$color-button-open: #00486D
+$color-button-modal: #4756c9
+$color-back: rgba(0,0 ,0 ,0.3 )
+
+/*-------------------------*/
+
+header
+   position: fixed
+   width: 100%
+   top: 0
+   left: 0
+   background-color: $color-nav
+
+.header__container
+   display: flex
+   height: 80px
+   align-items: center
+   justify-content: center
+
+nav
+   width: 100%
+   height: 80px
+   display: flex
+   justify-content: center
+   align-items: center
+   background-color: $color-nav
+   .open-modal
+      font-family: 'DM Sans', sans-serif
+      background-color: $color-button-open
+      padding: 15px 24px
+      color: #FFFFFF
+      border-radius: 10px
+   .open-modal:hover
+      background-color: #03A2A2
+      transition: 0.5s
+
+.content
+   padding-top: 100px
+
+.modal
+   position: fixed
+   width: 100%
+   height: 100%
+   background-color: $color-back
+   top: 0
+   left: 0
+   visibility: hidden
+   opacity: 0
+   transition: opacity 0.4s, visibility 0.4s
+
+.modal-body
+   min-height: 100%
+   display: flex
+   align-items: center
+   justify-content: center
+
+.modal-content
+   position: relative
+   width: 500px
+   padding: 30px
+   background-color: #e9ebfa
+   box-shadow: 0px 0px 17px -7px rgba(34,60 ,80 ,0.2 )
+   transform: scale(0)
+   transition: transform 0.8s
+
+.text-modal
+   width: 320px
+   word-wrap: break-word
+   font-size: 3rem
+   font-weight: 800
+   margin-bottom: 50px
+
+input
+   font-family: 'DM Sans', sans-serif
+   font-size: 0.938rem
+   height: 50px
+   padding-left: 10px
+   width: 100%
+   margin-bottom: 15px
+
+.submit
+   font-family: 'DM Sans', sans-serif
+   border: none
+   background-color: $color-button-modal
+   color: #f2f2f2
+   padding: 10px 45px
+   font-size: 1.125rem
+   border-radius: 5px
+   position: relative
+   box-sizing: border-box
+   transition: all 500ms ease
+
+.submit:hover
+   background: rgba(0,0,0,0)
+   color: $color-button-modal
+   box-shadow: inset 0 0 0 3px $color-button-modal
+
+.open
+   visibility: visible
+   opacity: 1
+
+.open .modal-content
+   transform: scale(1)
+
+.error input
+   border: solid 1px red
+
+p
+   color: red
+   margin-bottom: 15px
+   font-size: 0.938rem
+
+.material-symbols-outlined
+   position: absolute
+   right: 30px
+   cursor: pointer
